@@ -19,9 +19,9 @@ num_pixels = 100
 ORDER = neopixel.GRB
 pixel_yellow = (255, 100, 0)
 pixel_orange = (255, 50, 0)
-pixel_green = (0, 255, 0)
+pixel_red = (0, 255, 0)
 pixel_blue = (0, 0, 255)
-pixel_red = (255, 0, 0)
+pixel_green = (255, 0, 0)
 pixel_off = (0, 0, 0)
 
 pixels = neopixel.NeoPixel(
@@ -36,6 +36,6 @@ for i in range(num_pixels):
     pixels[i] = pixel_red
     pixels.show()
     print(f"Pixel number : {i}")
-    time.sleep(1)
+    time.sleep(DELAY)
     pixels[i] = pixel_off
     pixels.show()
