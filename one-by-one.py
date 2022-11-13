@@ -31,10 +31,13 @@ pixels = neopixel.NeoPixel(
 
 
 
-def walk_pixes():
+def walk_pixels():
     for i in range(num_pixels):
         pixels.set_pixel(i, pixel_red)
         pixels.show()
-        time.sleep(1)
+        print(f"Pixel number : {i}")
+        time.sleep(1000)
         pixels.set_pixel(i, pixel_off)
         pixels.show()
+
+walk_pixels()
