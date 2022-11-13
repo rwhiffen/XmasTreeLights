@@ -36,6 +36,6 @@ for i in range(num_pixels):
     pixels[i] = pixel_red
     pixels.show()
     print(f"Pixel number : {i}")
-    time.sleep(1000)
+    time.sleep(1)
     pixels[i] = pixel_off
     pixels.show()
