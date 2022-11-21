@@ -16,7 +16,7 @@ I already had a Rasbery Pi 3:
 
 I boought this 10A 5v power supply that came up as a *Products related to this item* suggestion. [https://amzn.to/3g0u67x](https://amzn.to/3g0u67x) - **Aclorol 5V 10A 50W Power Supply 100V-240V AC to DC Adapter 5V 10 amp Switching Converter 5.5x2.1mm Plug for WS2811 WS2812B WS2813 5V LED Strip Pixel Lights**
 
-The other stuff I had lying around from other projects, like gator clips with breadboard pins etc. 
+The other stuff I had lying around from other projects, like gator clips with breadboard pins etc.
 
 ### The software and wiring
 
@@ -29,6 +29,6 @@ Here's a bunch of links that taught me how to do this.  Sites that I mimiced the
 
 ### Making the lights work for the first time
 
-This did not start out well.  Initially I couldn't get the pixes to light up correctly. 
+This did not start out well.  Initially I couldn't get the pixes to light up correctly.
 ![](media/first-try.jpeg)
 First - most the LEDs wouldn't light up.  Second the colors were off and they'd flicker and blink oddly.  I had also incorrectly wired the pins at some point - now I'm not sure if I fried something.   I'll write up more in a blog post but basically I had to switch to GPIO 21 -** pixel_pin = board.D21**
