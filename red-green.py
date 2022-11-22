@@ -1,3 +1,11 @@
+# Rich Whiffen - 11/21/2022 - lots of lifted code here
+#
+# Mostly taken from the Adafruit learn guides.
+# https://learn.adafruit.com/neopixels-on-raspberry-pi/python-usage
+#
+# Flash alternating red and green colors
+#
+
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
 
