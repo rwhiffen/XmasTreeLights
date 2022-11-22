@@ -50,35 +50,35 @@ pixels.show()
 while true:
 
     for i in range(num_pixels):  #I may have a logic issue and be off by one here...
-        if i < num_pixels - 4 && i > 4:  #the normal case
+        if i < num_pixels - 4 and i > 4:  #the normal case
             pixels[i-1].brightness=0.2 #reset the trailing pixel
             pixels[i].brightness=0.4
             pixels[i+1].brightness=0.4
             pixels[i+2].brightness=0.4
             pixels[i+3].brightness=0.4
             pixels[i+4].brightness=0.4
-        elif i < num_pixels - 3 && i > 4: #end of the line detected
+        elif i < num_pixels - 3 and i > 4: #end of the line detected
             pixels[i-1].brightness=0.2 #reset the trailing pixel
             pixels[i].brightness=0.4
             pixels[i+1].brightness=0.4
             pixels[i+2].brightness=0.4
             pixels[i+3].brightness=0.4
             pixels[i+4-num_pixels].brightness=0.4  #wrap around
-        elif i < num_pixels - 2 && i > 4: #end of the line detected
+        elif i < num_pixels - 2 and i > 4: #end of the line detected
             pixels[i-1].brightness=0.2 #reset the trailing pixel
             pixels[i].brightness=0.4
             pixels[i+1].brightness=0.4
             pixels[i+2].brightness=0.4
             pixels[i+3-num_pixels].brightness=0.4
             pixels[i+4-num_pixels].brightness=0.4  #wrap around
-        elif i < num_pixels - 1 && i > 4: #end of the line detected
+        elif i < num_pixels - 1 and i > 4: #end of the line detected
             pixels[i-1].brightness=0.2 #reset the trailing pixel
             pixels[i].brightness=0.4
             pixels[i+1].brightness=0.4
             pixels[i+2-num_pixels].brightness=0.4
             pixels[i+3-num_pixels].brightness=0.4
             pixels[i+4-num_pixels].brightness=0.4  #wrap around
-        elif i < num_pixels  && i > 4: #end of the line detected
+        elif i < num_pixels  and i > 4: #end of the line detected
             pixels[i-1].brightness=0.2 #reset the trailing pixel
             pixels[i].brightness=0.4
             pixels[i+1-num_pixels].brightness=0.4
