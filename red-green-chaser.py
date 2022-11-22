@@ -47,7 +47,7 @@ for i in range(num_pixels):
 
 pixels.show()
 
-while true:
+while True:
 
     for i in range(num_pixels):  #I may have a logic issue and be off by one here...
         if i < num_pixels - 4 and i > 4:  #the normal case
