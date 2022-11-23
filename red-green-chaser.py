@@ -51,39 +51,43 @@ while True:
 
     for i in range(num_pixels):  #I may have a logic issue and be off by one here...
         if i < num_pixels - 4 and i > 4:  #the normal case
-            pixels[i-1].brightness=0.2 #reset the trailing pixel
-            pixels[i].brightness=0.4
-            pixels[i+1].brightness=0.4
-            pixels[i+2].brightness=0.4
-            pixels[i+3].brightness=0.4
-            pixels[i+4].brightness=0.4
+            if i % 2:
+                restore_color = pixel_red
+            else:
+                restore_color = pixel_green
+            pixels[i-1] = restore_color #reset the trailing pixel
+            pixels[i] = pixel_blue
+            pixels[i+1] = pixel_blue
+            pixels[i+2] = pixel_blue
+            pixels[i+3] = pixel_blue
+            pixels[i+4] = pixel_blue
         elif i < num_pixels - 3 and i > 4: #end of the line detected
-            pixels[i-1].brightness=0.2 #reset the trailing pixel
-            pixels[i].brightness=0.4
-            pixels[i+1].brightness=0.4
-            pixels[i+2].brightness=0.4
-            pixels[i+3].brightness=0.4
-            pixels[i+4-num_pixels].brightness=0.4  #wrap around
+            pixels[i-1] = restore_color #reset the trailing pixel
+            pixels[i] = pixel_blue
+            pixels[i+1] = pixel_blue
+            pixels[i+2] = pixel_blue
+            pixels[i+3] = pixel_blue
+            pixels[i+4-num_pixels] = pixel_blue  #wrap around
         elif i < num_pixels - 2 and i > 4: #end of the line detected
-            pixels[i-1].brightness=0.2 #reset the trailing pixel
-            pixels[i].brightness=0.4
-            pixels[i+1].brightness=0.4
-            pixels[i+2].brightness=0.4
-            pixels[i+3-num_pixels].brightness=0.4
-            pixels[i+4-num_pixels].brightness=0.4  #wrap around
+            pixels[i-1] = restore_color #reset the trailing pixel
+            pixels[i] = pixel_blue
+            pixels[i+1] = pixel_blue
+            pixels[i+2] = pixel_blue
+            pixels[i+3-num_pixels] = pixel_blue
+            pixels[i+4-num_pixels] = pixel_blue  #wrap around
         elif i < num_pixels - 1 and i > 4: #end of the line detected
-            pixels[i-1].brightness=0.2 #reset the trailing pixel
-            pixels[i].brightness=0.4
-            pixels[i+1].brightness=0.4
-            pixels[i+2-num_pixels].brightness=0.4
-            pixels[i+3-num_pixels].brightness=0.4
-            pixels[i+4-num_pixels].brightness=0.4  #wrap around
+            pixels[i-1] = restore_color #reset the trailing pixel
+            pixels[i] = pixel_blue
+            pixels[i+1] = pixel_blue
+            pixels[i+2-num_pixels] = pixel_blue
+            pixels[i+3-num_pixels] = pixel_blue
+            pixels[i+4-num_pixels] = pixel_blue #wrap around
         elif i < num_pixels  and i > 4: #end of the line detected
-            pixels[i-1].brightness=0.2 #reset the trailing pixel
-            pixels[i].brightness=0.4
-            pixels[i+1-num_pixels].brightness=0.4
-            pixels[i+2-num_pixels].brightness=0.4
-            pixels[i+3-num_pixels].brightness=0.4
-            pixels[i+4-num_pixels].brightness=0.4  #wrap around
+            pixels[i-1] = restore_color #reset the trailing pixel
+            pixels[i] = pixel_blue
+            pixels[i+1-num_pixels] = pixel_blue
+            pixels[i+2-num_pixels] = pixel_blue
+            pixels[i+3-num_pixels] = pixel_blue
+            pixels[i+4-num_pixels] = pixel_blue #wrap around
 
         pixels.show()
