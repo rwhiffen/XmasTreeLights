@@ -57,3 +57,4 @@ while True:
             pixels[i] = pixel_red
 
     pixels.show()
+    time.sleep(DELAY)
