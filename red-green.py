@@ -20,7 +20,7 @@ import neopixel
 pixel_pin = board.D21
 
 # The number of NeoPixels
-num_pixels = 1000
+num_pixels = 350
 DELAY=0.1
 
 # The order of the pixel colors - RGB or GRB. Some NeoPixels have red and green reversed!
@@ -40,7 +40,7 @@ pixels = neopixel.NeoPixel(
 
 
 
-while true:
+while True:
     for i in range(num_pixels):
         if i % 2:
             pixels[i] = pixel_red
