@@ -33,8 +33,14 @@ pixel_blue = (0, 0, 255)
 pixel_green = (255, 0, 0)
 pixel_off = (0, 0, 0)
 
-row_one = (10, 55)
-row_two = (75, 95)
+
+row_one = (0, 55)
+row_two = (56, 102)
+row_three = (103, 143)
+row_four = (144, 180)
+row_five = (181, 210)
+row_six =  (211, 234)
+row_seven = (235, 249)
 
 pixels = neopixel.NeoPixel(
     pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
