@@ -13,6 +13,7 @@
 import time
 import board
 import neopixel
+import json
 
 
 # Choose an open pin connected to the Data In of the NeoPixel strip, i.e. board.D18
@@ -22,6 +23,8 @@ pixel_pin = board.D21
 # The number of NeoPixels
 num_pixels = 350
 DELAY=0.2
+
+TREE_DICT_FILE="home-tree.json"
 
 # The order of the pixel colors - RGB or GRB. Some NeoPixels have red and green reversed!
 # For RGBW NeoPixels, simply change the ORDER to RGBW or GRBW.
@@ -34,13 +37,8 @@ pixel_green = (255, 0, 0)
 pixel_off = (0, 0, 0)
 
 
-row_one = (0, 55)
-row_two = (56, 102)
-row_three = (103, 143)
-row_four = (144, 180)
-row_five = (181, 210)
-row_six =  (211, 234)
-row_seven = (235, 249)
+with open(TREE_DICT_FILE, 'r') as handle:
+    tree_dict = json.loads(handle.read())
 
 pixels = neopixel.NeoPixel(
     pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
@@ -53,13 +51,11 @@ def turn_off():
     pixels.show()
 
 while not is_finished:
-
-    start_led = int(input("starting LED: "))
-    end_led = int(input("endinging LED: "))
-
-    for i in range(start_led,end_led):  #I may have a logic issue and be off by one here...
-        pixels[i] = pixel_blue
-    pixels.show()
-    should_turn_off = input("Y/N - turn all off? ")
-    if should_turn_off.lower() == "y":
-        turn_off()
+    for row in tree_dict:
+        start_led=tree_dict[row][0]
+        end_led=tree_dict[row][1]
+        for i in range(start_led,end_led):  #I may have a logic issue and be off by one here...
+            pixels[i] = pixel_blue
+        pixels.show()
+        time.sleep(DELAY)
+    turn_off()
