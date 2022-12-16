@@ -7,6 +7,8 @@ import board
 import neopixel
 
 
+DELAY=0.1 # delay in color change in seconds 0.0001 = 1ms
+
 pixel_pin = board.D21
 num_pixels = 350
 ORDER = neopixel.GRB
@@ -48,4 +50,4 @@ def rainbow_cycle(wait):
 
 
 while True:
-    rainbow_cycle(0.001)  # rainbow cycle with 1ms delay per step
+    rainbow_cycle(DELAY)  # rainbow cycle with 1ms delay per step
