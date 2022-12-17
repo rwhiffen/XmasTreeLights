@@ -50,12 +50,20 @@ def turn_off():
     pixels.fill((0, 0, 0))
     pixels.show()
 
+old_start_led = 0
+old_end_led=0
+
 while not is_finished:
     for row in tree_dict:
         start_led=tree_dict[row][0]
         end_led=tree_dict[row][1]
+        for i in range(old_start_led,old_end_led):  #I may have a logic issue and be off by one here...
+            pixels[i] = pixel_off
+
         for i in range(start_led,end_led):  #I may have a logic issue and be off by one here...
             pixels[i] = pixel_blue
         pixels.show()
         time.sleep(DELAY)
+        old_start_led = start_led
+        old_end_led = end_led
     turn_off()
