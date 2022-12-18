@@ -44,7 +44,7 @@ def turn_off():
     pixels.show()
 
 def pick_color():
-    colors = [pixel_aqua, pixel_magena, pixel_amber, pixel_pink, pixel_yellow, pixel_orange, pixel_red, pixel_blue, pixel_green, pixel_purple, pixel_white, pixel_off]
+    colors = [pixel_jade, pixel_aqua, pixel_magena, pixel_amber, pixel_pink, pixel_yellow, pixel_orange, pixel_red, pixel_blue, pixel_green, pixel_purple, pixel_white, pixel_off]
     color = random.choice(colors)
     return color
 
