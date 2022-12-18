@@ -29,6 +29,7 @@ pixel_red = (0, 250, 0)
 pixel_blue = (0, 0, 250)
 pixel_green = (250, 0, 0)
 pixel_purple = (75, 225, 175)
+pixel_white = (250, 250, 250)
 pixel_off = (0, 0, 0)
 
 is_finished = False
@@ -38,7 +39,7 @@ def turn_off():
     pixels.show()
 
 def pick_color():
-    colors = [pixel_yellow, pixel_orange, pixel_red, pixel_blue, pixel_green, pixel_purple, pixel_off]
+    colors = [pixel_yellow, pixel_orange, pixel_red, pixel_blue, pixel_green, pixel_purple, pixel_white, pixel_off]
     color = random.choice(colors)
     return color
 
@@ -47,6 +48,9 @@ pixels = neopixel.NeoPixel(
     pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
 )
 
+#start out white
+pixels.fill(pixel_white)
+pixels.show()
 
 while not is_finished:
     pixel_num = random.randint(0,num_pixels-1)
