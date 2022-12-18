@@ -25,7 +25,8 @@ ORDER = neopixel.GRB
 
 pixel_aqua = (250, 50, 250)
 pixel_magena = (0, 250, 20)
-pixel_yellow = (100, 250, 0)
+pixel_yellow = (225, 250, 30)
+pixel_amber = (100, 250, 0)
 pixel_orange = (50, 250, 0)
 pixel_red = (0, 250, 0)
 pixel_blue = (0, 0, 250)
@@ -33,6 +34,7 @@ pixel_green = (250, 0, 0)
 pixel_pink = (90, 242, 255)
 pixel_purple = (0, 180, 250)
 pixel_white = (250, 250, 250)
+pixel_jade = (240, 0, 40)
 pixel_off = (0, 0, 0)
 
 is_finished = False
@@ -42,7 +44,7 @@ def turn_off():
     pixels.show()
 
 def pick_color():
-    colors = [pixel_aqua, pixel_magena, pixel_pink, pixel_yellow, pixel_orange, pixel_red, pixel_blue, pixel_green, pixel_purple, pixel_white, pixel_off]
+    colors = [pixel_aqua, pixel_magena, pixel_amber, pixel_pink, pixel_yellow, pixel_orange, pixel_red, pixel_blue, pixel_green, pixel_purple, pixel_white, pixel_off]
     color = random.choice(colors)
     return color
 
