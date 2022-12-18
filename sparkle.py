@@ -23,12 +23,15 @@ ORDER = neopixel.GRB
 
 #predefine some colors
 
+pixel_aqua = (250, 50, 250)
+pixel_magena = (0, 250, 20)
 pixel_yellow = (100, 250, 0)
 pixel_orange = (50, 250, 0)
 pixel_red = (0, 250, 0)
 pixel_blue = (0, 0, 250)
 pixel_green = (250, 0, 0)
-pixel_purple = (75, 225, 175)
+pixel_pink = (90, 242, 255)
+pixel_purple = (0, 180, 250)
 pixel_white = (250, 250, 250)
 pixel_off = (0, 0, 0)
 
