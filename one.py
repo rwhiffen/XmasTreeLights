@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: MIT
 
 # Simple test for NeoPixels on Raspberry Pi
+# forcing an update so the timestamp updates
+
 import time
 import board
 import neopixel
